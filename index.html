@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Au-Delà du Sourire — Webinaire | Yacine Roch</title>
+<title>Au-Delà du Sourire — Webinaire | Coach YasS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #FAF6EF;
-    --deep: #1A1208;
+    --cream: #FAF3E8;
+    --deep: #2A1F0A;
     --gold: #C9A84C;
     --gold-light: #E8D5A3;
-    --gold-pale: #F5EDD8;
+    --gold-pale: #FFF8EE;
     --terracotta: #8B3A2A;
     --sage: #6B7C65;
     --blush: #D4956A;
-    --charcoal: #2D2416;
-    --mid: #6B5C3E;
+    --charcoal: #2A1F0A;
+    --mid: #8B6A3A;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -255,7 +255,7 @@
     position: absolute; inset: 0;
     background-image:
       linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+      linear-gradient(120deg, rgba(201,168,76,0.06) 1px, transparent 1px);
     background-size: 40px 40px;
   }
   .hero-orb {
@@ -618,7 +618,7 @@
     border: 1px solid rgba(201,168,76,0.15);
   }
   .pricing-card {
-    background: #221B0D;
+    background: #352810;
     padding: 48px 36px;
     display: flex;
     flex-direction: column;
@@ -743,851 +743,7 @@
   .pricing-note strong { color: rgba(250,246,239,0.65); }
 
   /* ——— BONUSES ——— */
-  .bonus-section {
-    padding: 100px 80px;
-    background: var(--deep);
-    border-top: 1px solid rgba(201,168,76,0.1);
-  }
-  .bonus-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .bonus-header { text-align: center; margin-bottom: 56px; }
-  .bonus-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 300;
-    color: var(--cream);
-    margin-bottom: 12px;
-  }
-  .bonus-header .val {
-    font-size: 0.8rem;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-  }
-  .bonus-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background: rgba(201,168,76,0.08);
-  }
-  .bonus-item {
-    background: #1A1208;
-    padding: 36px 32px;
-    display: flex;
-    gap: 24px;
-    align-items: flex-start;
-    transition: background 0.3s;
-  }
-  .bonus-item:hover { background: #211709; }
-  .bonus-icon {
-    font-size: 1.6rem;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .bonus-content h4 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--gold-light);
-    margin-bottom: 8px;
-  }
-  .bonus-content p {
-    font-size: 0.8rem;
-    color: rgba(250,246,239,0.5);
-    line-height: 1.7;
-  }
-  .bonus-label {
-    margin-top: 12px;
-    display: inline-block;
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    border: 1px solid rgba(201,168,76,0.25);
-    padding: 4px 12px;
-  }
-
-  /* ——— COACH BIO ——— */
-  .bio-section {
-    padding: 120px 80px;
-    background: var(--cream);
-  }
-  .bio-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-  .bio-visual {
-    position: relative;
-  }
-  .bio-frame {
-    background: var(--charcoal);
-    aspect-ratio: 3/4;
-    position: relative;
-    overflow: hidden;
-    max-width: 380px;
-  }
-  .bio-frame-bg {
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 60% 80% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 60%),
-      linear-gradient(180deg, var(--charcoal) 0%, #0D0B06 100%);
-  }
-  .bio-frame-text {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    padding: 40px;
-    background: linear-gradient(to top, rgba(10,8,4,0.9) 0%, transparent 100%);
-  }
-  .bio-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--cream);
-    display: block;
-  }
-  .bio-title {
-    font-size: 0.68rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-top: 6px;
-    display: block;
-  }
-  .bio-ornament {
-    position: absolute;
-    top: 24px; right: 24px;
-    width: 80px; height: 80px;
-    border: 1px solid rgba(201,168,76,0.2);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .bio-ornament::before {
-    content: 'YR';
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: rgba(201,168,76,0.5);
-  }
-
-  .bio-corner {
-    position: absolute;
-    top: -16px; right: -16px;
-    width: 60%; height: 60%;
-    border: 1px solid var(--gold-light);
-    z-index: -1;
-    opacity: 0.4;
-  }
-
-  .bio-content h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 300;
-    color: var(--charcoal);
-    line-height: 1.2;
-    margin-bottom: 24px;
-  }
-  .bio-content h2 em { font-style: italic; color: var(--terracotta); }
-  .bio-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    font-style: italic;
-    color: var(--mid);
-    border-left: 2px solid var(--gold);
-    padding: 16px 24px;
-    margin-bottom: 32px;
-    background: var(--gold-pale);
-  }
-  .bio-content p {
-    font-size: 0.88rem;
-    color: var(--mid);
-    line-height: 1.85;
-    margin-bottom: 16px;
-  }
-  .credentials {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 32px;
-  }
-  .credential {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 16px;
-    background: var(--gold-pale);
-    border-left: 2px solid var(--gold-light);
-  }
-  .credential .cred-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
-  .credential p {
-    font-size: 0.77rem;
-    color: var(--charcoal);
-    line-height: 1.5;
-    margin: 0;
-    font-weight: 400;
-  }
-
-  /* ——— TESTIMONIALS ——— */
-  .testimonials-section {
-    padding: 100px 80px;
-    background: var(--gold-pale);
-  }
-  .testimonials-inner {
-    max-width: 1100px; margin: 0 auto;
-  }
-  .testimonials-header { text-align: center; margin-bottom: 56px; }
-  .testimonials-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 3rem);
-    font-weight: 300;
-    color: var(--charcoal);
-  }
-  .testimonials-header h2 em { font-style: italic; color: var(--terracotta); }
-  .testi-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--gold-light);
-    border: 1px solid var(--gold-light);
-  }
-  .testi-card {
-    background: white;
-    padding: 40px 32px;
-    display: flex;
-    flex-direction: column;
-    transition: background 0.3s;
-  }
-  .testi-card:hover { background: var(--cream); }
-  .testi-stars {
-    display: flex; gap: 4px; margin-bottom: 20px;
-  }
-  .star { color: var(--gold); font-size: 0.8rem; }
-  .testi-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-style: italic;
-    color: var(--charcoal);
-    line-height: 1.65;
-    flex: 1;
-    margin-bottom: 24px;
-  }
-  .testi-author {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    border-top: 1px solid var(--gold-light);
-    padding-top: 20px;
-  }
-  .testi-avatar {
-    width: 40px; height: 40px; border-radius: 50%;
-    background: var(--charcoal);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    color: var(--gold);
-    font-weight: 300;
-    flex-shrink: 0;
-  }
-  .testi-info .name {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--charcoal);
-    display: block;
-  }
-  .testi-info .role {
-    font-size: 0.72rem;
-    color: var(--mid);
-    letter-spacing: 0.05em;
-    display: block;
-    margin-top: 2px;
-  }
-
-  /* ——— URGENCY ——— */
-  .urgency-section {
-    padding: 80px;
-    background: var(--terracotta);
-    color: var(--cream);
-    text-align: center;
-  }
-  .urgency-section h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3.4rem);
-    font-weight: 300;
-    color: var(--cream);
-    line-height: 1.25;
-    margin-bottom: 16px;
-  }
-  .urgency-section h2 em { font-style: italic; color: var(--gold-light); }
-  .urgency-section p {
-    font-size: 0.9rem;
-    color: rgba(250,246,239,0.8);
-    max-width: 500px;
-    margin: 0 auto 36px;
-    line-height: 1.8;
-  }
-  .urgency-section .btn-primary {
-    background: var(--cream);
-    color: var(--charcoal);
-    margin: 0 auto;
-    display: inline-flex;
-    max-width: 400px;
-  }
-  .urgency-section .btn-primary::before {
-    background: var(--deep);
-  }
-  .urgency-section .btn-primary span,
-  .urgency-section .btn-primary .arrow { color: var(--charcoal); }
-  .urgency-section .btn-primary:hover span,
-  .urgency-section .btn-primary:hover .arrow { color: var(--gold-light); }
-  .urgency-meta {
-    margin-top: 24px;
-    font-size: 0.72rem;
-    color: rgba(250,246,239,0.55);
-    letter-spacing: 0.1em;
-  }
-
-  /* ——— FAQ ——— */
-  .faq-section {
-    padding: 100px 80px;
-    background: var(--cream);
-  }
-  .faq-inner {
-    max-width: 760px; margin: 0 auto;
-  }
-  .faq-inner h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    font-weight: 300;
-    color: var(--charcoal);
-    text-align: center;
-    margin-bottom: 56px;
-  }
-  .faq-item {
-    border-bottom: 1px solid var(--gold-light);
-    overflow: hidden;
-  }
-  .faq-q {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 0;
-    cursor: pointer;
-    gap: 24px;
-  }
-  .faq-q span {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--charcoal);
-    line-height: 1.4;
-  }
-  .faq-toggle {
-    width: 28px; height: 28px;
-    border: 1px solid var(--gold-light);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    color: var(--gold);
-    font-size: 1.2rem;
-    transition: all 0.3s;
-    font-weight: 300;
-  }
-  .faq-item.open .faq-toggle {
-    background: var(--gold);
-    color: white;
-    transform: rotate(45deg);
-  }
-  .faq-a {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-  }
-  .faq-item.open .faq-a { max-height: 300px; }
-  .faq-a p {
-    font-size: 0.87rem;
-    color: var(--mid);
-    line-height: 1.85;
-    padding-bottom: 24px;
-  }
-
-  /* ——— FINAL CTA ——— */
-  .final-cta {
-    padding: 120px 80px;
-    background: var(--charcoal);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .final-cta::before {
-    content: '';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    border: 1px solid rgba(201,168,76,0.08);
-  }
-  .final-cta::after {
-    content: '';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px; height: 900px;
-    border-radius: 50%;
-    border: 1px solid rgba(201,168,76,0.04);
-  }
-  .final-cta-inner { position: relative; z-index: 1; }
-  .final-cta h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.4rem, 5vw, 4.5rem);
-    font-weight: 300;
-    color: var(--cream);
-    line-height: 1.15;
-    margin-bottom: 24px;
-  }
-  .final-cta h2 em { font-style: italic; color: var(--gold); }
-  .final-cta p {
-    font-size: 0.95rem;
-    color: rgba(250,246,239,0.55);
-    max-width: 480px;
-    margin: 0 auto 48px;
-    line-height: 1.8;
-  }
-  .final-cta .btn-primary {
-    margin: 0 auto;
-    display: inline-flex;
-    max-width: 420px;
-    justify-content: center;
-  }
-
-  /* ——— FOOTER ——— */
-  footer {
-    background: var(--deep);
-    padding: 40px 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(201,168,76,0.1);
-  }
-  footer .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    color: rgba(250,246,239,0.4);
-    letter-spacing: 0.1em;
-  }
-  footer .copy {
-    font-size: 0.7rem;
-    color: rgba(250,246,239,0.25);
-    letter-spacing: 0.08em;
-  }
-
-  /* ——— ANIMATIONS ——— */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .hero-left > * {
-    animation: fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
-  .hero-left > *:nth-child(2) { animation-delay: 0.2s; }
-  .hero-left > *:nth-child(3) { animation-delay: 0.3s; }
-  .hero-left > *:nth-child(4) { animation-delay: 0.4s; }
-  .hero-left > *:nth-child(5) { animation-delay: 0.5s; }
-  .hero-left > *:nth-child(6) { animation-delay: 0.6s; }
-  .hero-left > *:nth-child(7) { animation-delay: 0.7s; }
-
-  /* ——— COUNTDOWN ——— */
-  .countdown-bar {
-    background: var(--deep);
-    border-bottom: 1px solid rgba(201,168,76,0.15);
-    padding: 10px 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-top: 62px;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    color: rgba(250,246,239,0.6);
-  }
-  .countdown-timer {
-    display: flex; gap: 16px;
-  }
-  .countdown-unit {
-    text-align: center;
-  }
-  .countdown-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--gold);
-    display: block;
-    line-height: 1;
-  }
-  .countdown-label {
-    font-size: 0.55rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(250,246,239,0.35);
-    display: block;
-    margin-top: 4px;
-  }
-  .countdown-sep {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    color: rgba(201,168,76,0.3);
-    align-self: center;
-    margin-bottom: 14px;
-  }
-
-  /* ——— RESPONSIVE ——— */
-  @media (max-width: 1024px) {
-    nav { padding: 16px 24px; }
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 100px 32px 60px; }
-    .hero-right { height: 400px; }
-    .pain-inner, .learn-inner, .bio-inner { grid-template-columns: 1fr; gap: 48px; }
-    .pillars, .pricing-cards { grid-template-columns: 1fr; }
-    .pricing-card.featured { transform: none; }
-    .testi-grid { grid-template-columns: 1fr; }
-    .bonus-grid { grid-template-columns: 1fr; }
-    .credentials { grid-template-columns: 1fr; }
-    section, .pain-section, .science-section, .learn-section, .pricing-section,
-    .bonus-section, .bio-section, .testimonials-section, .urgency-section,
-    .faq-section, .final-cta { padding: 80px 32px; }
-    .learn-header { position: static; }
-    footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px; }
-    .countdown-bar { padding: 10px 24px; flex-wrap: wrap; gap: 12px; margin-top: 58px; }
-  }
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <div class="nav-logo">Yacine Roch · Groupe Roch'R</div>
-  <a href="#inscription" class="nav-cta">Réserver ma place →</a>
-</nav>
-
-<!-- COUNTDOWN BAR -->
-<div class="countdown-bar">
-  <span style="color:rgba(201,168,76,0.8); letter-spacing:0.15em;">ÉVÉNEMENT EXCLUSIF — PLACES LIMITÉES</span>
-  <div class="countdown-timer">
-    <div class="countdown-unit"><span class="countdown-num" id="days">--</span><span class="countdown-label">Jours</span></div>
-    <span class="countdown-sep">:</span>
-    <div class="countdown-unit"><span class="countdown-num" id="hours">--</span><span class="countdown-label">Heures</span></div>
-    <span class="countdown-sep">:</span>
-    <div class="countdown-unit"><span class="countdown-num" id="mins">--</span><span class="countdown-label">Minutes</span></div>
-    <span class="countdown-sep">:</span>
-    <div class="countdown-unit"><span class="countdown-num" id="secs">--</span><span class="countdown-label">Secondes</span></div>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow"><span>Atelier Transformationnel en Ligne</span></div>
-    <div class="hero-date-badge">
-      📅 <strong>Samedi, le 29 mars 2026</strong> &nbsp;·&nbsp; 15h00 – 17h00 GMT &nbsp;·&nbsp; Via Zoom
-    </div>
-    <h1>
-      Au-Delà<br>
-      du <span class="accent">Sourire</span>
-    </h1>
-    <p class="hero-subtitle">
-      L'art de la positivité neurologique — reprogrammez votre cerveau en 2 minutes par jour
-    </p>
-    <div class="hero-divider"></div>
-    <p class="hero-promise">
-      Un atelier pratique de 90 minutes conçu pour les femmes qui en ont assez d'entendre <strong>« sois positive »</strong> sans jamais comprendre <em>comment</em>. Nous allons au-delà du discours. Nous travaillons avec la science.
-    </p>
-    <div class="hero-cta-group">
-      <a href="#inscription" class="btn-primary">
-        <span>Je réserve ma place</span>
-        <span class="arrow">→</span>
-      </a>
-      <a href="#programme" class="btn-secondary">
-        Découvrir le programme
-      </a>
-    </div>
-    <div class="hero-trust">
-      <span class="trust-dot"></span>
-      <span>500+ femmes accompagnées</span>
-      <span class="trust-dot"></span>
-      <span>4 continents d'expertise</span>
-      <span class="trust-dot"></span>
-      <span>Science appliquée</span>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="hero-bg-pattern"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-orb orb-1"></div>
-    <div class="hero-orb orb-2"></div>
-    <div class="hero-orb orb-3"></div>
-    <div class="hero-quote-card">
-      <p class="big-quote">
-        « Votre cerveau<br>n'est pas <span class="hl">votre ennemi.</span><br>Il attend juste<br>qu'on lui apprenne<br>à vous <span class="hl">servir.</span> »
-      </p>
-      <p class="quote-attr">— Yacine Roch</p>
-    </div>
-    <div class="hero-stat-strip">
-      <div class="hero-stat"><span class="num">18</span><span class="label">Ans d'expérience</span></div>
-      <div class="hero-stat"><span class="num">500+</span><span class="label">Femmes coachées</span></div>
-      <div class="hero-stat"><span class="num">90</span><span class="label">Min. de transformation</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- PAIN SECTION -->
-<section class="pain-section">
-  <div class="pain-inner">
-    <div class="pain-header">
-      <div class="section-eyebrow"><span>Vous reconnaissez-vous ?</span></div>
-      <h2>Cette fatigue que<br>personne ne<br><em>voit.</em></h2>
-      <p>Vous gérez tout. Vous souriez. Vous assurez. Et pourtant, à l'intérieur, quelque chose résiste. Ce n'est pas un manque de volonté. C'est de la biologie.</p>
-      <div class="reveal">
-        <p>Ce n'est pas votre faute. Votre cerveau est simplement câblé pour la <strong>survie</strong> — pas pour l'épanouissement. Mais cela peut changer.</p>
-      </div>
-    </div>
-    <div class="pain-list">
-      <div class="pain-item">
-        <div class="pain-icon">😔</div>
-        <div class="pain-text"><strong>L'anxiété au réveil</strong>Vous ouvrez les yeux et l'inquiétude est déjà là, avant même que la journée commence.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">🔄</div>
-        <div class="pain-text"><strong>Les pensées en boucle</strong>Ce disque rayé dans votre tête que vous n'arrivez pas à éteindre, même le soir.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">😶</div>
-        <div class="pain-text"><strong>Le masque du sourire</strong>Forte en public, épuisée en privé. Vous souriez au travail mais vous vous effondrez à la maison.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">😤</div>
-        <div class="pain-text"><strong>Les techniques qui ne tiennent pas</strong>Thérapie, méditation, yoga… vous avez tout essayé. Rien ne dure vraiment.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">💔</div>
-        <div class="pain-text"><strong>La culpabilité de ne pas être « assez positive »</strong>Comme si votre état mental était une question de caractère et non de neurologie.</div>
-      </div>
-      <div class="pain-item">
-        <div class="pain-icon">⏳</div>
-        <div class="pain-text"><strong>La peur que ce soit « comme ça pour toujours »</strong>Cette petite voix qui dit que le changement, c'est pour les autres. Pas pour vous.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SCIENCE SECTION -->
-<section class="science-section">
-  <div class="science-inner">
-    <div class="section-eyebrow" style="justify-content:center;"><span>L'approche scientifique</span></div>
-    <h2>La positivité n'est pas<br>une <em>attitude</em>. C'est une<br>compétence neurologique.</h2>
-    <p class="science-intro">Pendant cet atelier, vous découvrirez les 3 piliers fondés sur les neurosciences qui transforment durablement votre rapport à vous-même — sans faux sourire, sans injonctions, sans culpabilité.</p>
-    <div class="pillars" id="programme">
-      <div class="pillar">
-        <span class="pillar-num">01</span>
-        <h3>Comprendre votre système nerveux</h3>
-        <p>Pourquoi votre cerveau est biologiquement câblé pour la négativité — et comment sortir du mode « survie » pour accéder à l'épanouissement.</p>
-        <span class="tag">Neurobiologie appliquée</span>
-      </div>
-      <div class="pillar">
-        <span class="pillar-num">02</span>
-        <h3>Désamorcer le Syndrome de la Bonne Élève</h3>
-        <p>Ce schéma invisible qui vide votre énergie, sabote vos ambitions et entretient l'épuisement — et les 3 techniques pour le reprogrammer.</p>
-        <span class="tag">Psychologie cognitive</span>
-      </div>
-      <div class="pillar">
-        <span class="pillar-num">03</span>
-        <h3>Commander votre cerveau pour vous servir</h3>
-        <p>La méthode Brain Rewiring en 2 minutes par jour — une démonstration en direct que vous sentirez instantanément dans votre corps.</p>
-        <span class="tag">Neuroplasticité</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT YOU LEARN -->
-<section class="learn-section">
-  <div class="learn-inner">
-    <div class="learn-header">
-      <div class="section-eyebrow"><span>Programme détaillé</span></div>
-      <h2>Ce que vous <em>vivrez</em> pendant ces 90 minutes</h2>
-      <p>Ce n'est pas une conférence passive. Chaque minute est conçue pour vous faire vivre une expérience — pas seulement entendre des informations.</p>
-      <div class="not-this">
-        <p>Cet atelier n'est PAS pour :</p>
-        <p class="not-list">— Celles qui cherchent des solutions magiques<br>— Celles qui veulent écouter sans jamais passer à l'action<br>— Celles qui ont déjà tout compris</p>
-      </div>
-    </div>
-    <div class="learn-items">
-      <div class="learn-item">
-        <div class="learn-marker">01</div>
-        <div class="learn-text">
-          <h4>La vérité sur la pensée positive</h4>
-          <p>Comprendre pourquoi « force le sourire » est biologiquement contre-productif — et ce que la science dit vraiment sur le bien-être durable.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-marker">02</div>
-        <div class="learn-text">
-          <h4>Les 3 découvertes de 2025-2026 qui changent tout</h4>
-          <p>Les recherches les plus récentes sur le cerveau féminin, la régulation émotionnelle et la neuroplasticité — expliquées simplement, applicables immédiatement.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-marker">03</div>
-        <div class="learn-text">
-          <h4>Exercices guidés en direct</h4>
-          <p>Des techniques de régulation du système nerveux que vous pratiquez en temps réel. Vous sentirez la différence avant la fin de la session.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-marker">04</div>
-        <div class="learn-text">
-          <h4>Moments d'introspection sécurisés</h4>
-          <p>Un espace rare où vous pouvez être honnête avec vous-même — sans jugement, sans performance, sans masque.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-marker">05</div>
-        <div class="learn-text">
-          <h4>Votre plan d'action personnalisé 21 jours</h4>
-          <p>Vous repartez avec une feuille de route concrète, adaptée à votre réalité de femme africaine active — pas un plan théorique occidental copié-collé.</p>
-        </div>
-      </div>
-      <div class="learn-item">
-        <div class="learn-marker">06</div>
-        <div class="learn-text">
-          <h4>Session Q&R — vos questions, mes réponses</h4>
-          <p>Une opportunité rare d'un échange direct avec une coach internationale dont les clients incluent des ministres, des PDG et des multinationales.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing-section" id="inscription">
-  <div class="pricing-inner">
-    <div class="pricing-header">
-      <div class="section-eyebrow" style="justify-content:center;"><span>Investir en soi</span></div>
-      <h2>Choisissez votre<br>niveau d'engagement</h2>
-      <p>Trois formules pensées pour respecter votre budget tout en honorant votre engagement envers vous-même.</p>
-    </div>
-    <div class="pricing-cards">
-      <div class="pricing-card">
-        <span class="card-tier">Formule Découverte</span>
-        <span class="card-name">Participante</span>
-        <span class="card-emoji">🌱</span>
-        <div class="card-price">
-          <span class="price-num">9 900</span>
-          <span class="price-currency">FCFA</span>
-        </div>
-        <p class="card-desc">L'entrée dans l'expérience. Pour découvrir l'approche et vivre la session en direct.</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Accès au webinaire live (90 min)</li>
-          <li>Exercices guidés en direct</li>
-          <li>Session Q&R collective</li>
-          <li>Attestation de participation</li>
-        </ul>
-        <a href="#" class="card-cta">Choisir cette formule →</a>
-      </div>
-      <div class="pricing-card featured">
-        <span class="card-tier">Formule Engagement</span>
-        <span class="card-name">Engagée</span>
-        <span class="card-emoji">⭐</span>
-        <div class="card-price">
-          <span class="price-num">15 000</span>
-          <span class="price-currency">FCFA</span>
-        </div>
-        <p class="card-desc">Pour celles qui veulent ancrer la transformation — avec les ressources pour continuer après le live.</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Tout du tarif Participante</li>
-          <li>Replay disponible 30 jours</li>
-          <li>Workbook PDF complet (30 pages)</li>
-          <li>Routine mentale 7 jours guidée</li>
-          <li>Affirmations personnalisées (audio)</li>
-        </ul>
-        <a href="#" class="card-cta">Choisir cette formule →</a>
-      </div>
-      <div class="pricing-card">
-        <span class="card-tier">Formule Transformation</span>
-        <span class="card-name">VIP</span>
-        <span class="card-emoji">🔥</span>
-        <div class="card-price">
-          <span class="price-num">25 000</span>
-          <span class="price-currency">FCFA</span>
-        </div>
-        <p class="card-desc">L'expérience complète avec un suivi personnalisé et l'accès à la communauté privée.</p>
-        <div class="card-divider"></div>
-        <ul class="card-features">
-          <li>Tout du tarif Engagée</li>
-          <li>Session Q&R privée avec Yacine</li>
-          <li>Groupe WhatsApp privé — suivi 2 semaines</li>
-          <li>Tous les bonus exclusifs (valeur 45 000 F)</li>
-          <li>Accès à la communauté Ubuntu-Motivation'ELLES</li>
-        </ul>
-        <a href="#" class="card-cta">Choisir cette formule →</a>
-      </div>
-    </div>
-    <p class="pricing-note">Paiement via <strong>Orange Money · Moov Money · Carte bancaire</strong> &nbsp;·&nbsp; Tarif diaspora disponible en euros sur demande</p>
-  </div>
-</section>
-
-<!-- BONUSES -->
-<section class="bonus-section">
-  <div class="bonus-inner">
-    <div class="bonus-header">
-      <div class="section-eyebrow" style="justify-content:center;"><span>Offerts avec le tarif VIP</span></div>
-      <h2>Vos bonus exclusifs</h2>
-      <p class="val">Valeur totale estimée : 45 000 FCFA — offerts avec la formule VIP</p>
-    </div>
-    <div class="bonus-grid">
-      <div class="bonus-item">
-        <div class="bonus-icon">📘</div>
-        <div class="bonus-content">
-          <h4>Guide de Neuroplasticité Positive</h4>
-          <p>15 pages de science appliquée — les techniques les plus efficaces pour recâbler votre cerveau, expliquées en français accessible.</p>
-          <span class="bonus-label">PDF Premium</span>
-        </div>
-      </div>
-      <div class="bonus-item">
-        <div class="bonus-icon">📅</div>
-        <div class="bonus-content">
-          <h4>Challenge 21-Day Brain Rewiring</h4>
-          <p>Un tracker quotidien avec vos micro-actions journalières. La transformation se mesure. Ce document vous le prouve.</p>
-          <span class="bonus-label">Tracker PDF</span>
-        </div>
-      </div>
-      <div class="bonus-item">
-        <div class="bonus-icon">🔬</div>
-        <div class="bonus-content">
-          <h4>Emotional Fitness Assessment</h4>
-          <p>Un quiz interactif pour identifier précisément vos patterns émotionnels et savoir exactement sur quoi travailler en priorité.</p>
-          <span class="bonus-label">Quiz Interactif</span>
-        </div>
-      </div>
-      <div class="bonus-item">
-        <div class="bonus-icon">📓</div>
-        <div class="bonus-content">
-          <h4>Hope Cultivation Workbook</h4>
-          <p>Un cahier d'exercices pour cultiver l'espoir comme compétence active — pas comme sentiment passif. Une approche unique en Afrique francophone.</p>
-          <span class="bonus-label">Cahier d'exercices</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- BIO -->
 <!-- BIO -->
 <section class="bio-section">
   <div class="bio-inner">
@@ -1596,8 +752,8 @@
         <div class="bio-frame-bg"></div>
         <div class="bio-ornament"></div>
         <div class="bio-frame-text">
-          <span class="bio-name">Yacine Roch</span>
-          <span class="bio-title">Fondatrice & PDG · Groupe Roch'R</span>
+          <span class="bio-name">Coach YasS</span>
+          <span class="bio-title">Fondatrice · Groupe Roch'R</span>
         </div>
       </div>
       <div class="bio-corner"></div>
@@ -1606,34 +762,34 @@
       <div class="section-eyebrow"><span>Votre animatrice</span></div>
       <h2>Une voix africaine.<br>Une <em>expertise</em> mondiale.</h2>
       <div class="bio-quote">
-        « J'ai vécu le burnout. J'ai transformé mon cerveau. Maintenant, j'enseigne comment — avec de la science, pas des slogans. »
+        « J'ai vécu le burnout. J'ai connu la dépression. J'ai transformé mon cerveau. Maintenant, j'enseigne comment — avec de la science, pas des slogans. »
       </div>
-      <p>Yacine Roch est Fondatrice et Présidente-Directrice du Groupe Roch'R, cabinet panafricain de conseil, formation et coaching basé à Ouagadougou, avec une présence à Londres et Montréal.</p>
+      <p>Coach YasS est Fondatrice et Gérante du Groupe Roch'R, cabinet panafricain de conseil, formation et coaching basé à Ouagadougou, avec une présence à Londres et Montréal.</p>
       <p>Après près d'une décennie comme conseillère en diplomatie économique pour les gouvernements britannique et gallois au Canada, elle a fait le choix délibéré de rentrer contribuer au développement africain — et d'y apporter le niveau d'excellence qu'elle avait côtoyé sur 4 continents.</p>
       <div class="credentials">
         <div class="credential">
           <span class="cred-icon">🎓</span>
-          <p>MBA en Management International — Université Laval, Canada</p>
+          <p>MBA en International Business —  Canada</p>
         </div>
         <div class="credential">
           <span class="cred-icon">🌍</span>
-          <p>18 ans d'expérience internationale — UK, Canada, Afrique</p>
+          <p>+ 18 ans d'expérience internationale — Afrique,  Amérique du Nord, Amérique du Sud, Europe</p>
         </div>
         <div class="credential">
           <span class="cred-icon">🏛️</span>
-          <p>Ancienne Conseillère économique, Gouvernements UK & Pays de Galles</p>
+          <p>Ancienne Conseillère, Gouvernements UK & Pays de Galles</p>
         </div>
         <div class="credential">
           <span class="cred-icon">🧠</span>
-          <p>Spécialiste TRIMA — Psychométrie & 120 compétences comportementales</p>
+          <p>Certifiée Spécialiste — Psychométrie (personnalité, compétences, leadership)</p>
         </div>
         <div class="credential">
           <span class="cred-icon">🏢</span>
-          <p>Clients : Ecobank, UBA, Orange, Ministères BF & Togo, GIZ, ALU</p>
+          <p>Clients : Banques,compagnies Telecom, Ministères BF & Togo, Universités (Burkina Faso, Rwanda, Canada)</p>
         </div>
         <div class="credential">
           <span class="cred-icon">👥</span>
-          <p>500+ processus de coaching individuel — ministres, PDG, dirigeantes</p>
+          <p>Centaine de processus de coaching (individuels et d'équipes)— ministres, PDG, dirigeantes toutes industries</p>
         </div>
       </div>
     </div>
@@ -1678,7 +834,7 @@
         <div class="testi-stars">
           <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
         </div>
-        <p class="testi-text">« Ce que j'ai appris en 90 minutes avec Yacine, j'aurais dû l'apprendre à 20 ans. La technique des 2 minutes — je l'utilise chaque matin avant mes réunions. »</p>
+        <p class="testi-text">« Ce que j'ai appris en 120 minutes avec Yacine, j'aurais dû l'apprendre à 20 ans. La technique des 2 minutes — je l'utilise chaque matin avant mes réunions. »</p>
         <div class="testi-author">
           <div class="testi-avatar">M</div>
           <div class="testi-info">
@@ -1693,7 +849,7 @@
 
 <!-- URGENCY -->
 <section class="urgency-section">
-  <h2>Les places se<br>ferment le<br><em>22 mars 2026.</em></h2>
+  <h2>Les places se<br>ferment le<br><em>30 avril 2026.</em></h2>
   <p>Cet atelier est conçu pour une expérience intime et de qualité. Le nombre de participantes est volontairement limité pour garantir la profondeur des échanges.</p>
   <a href="#inscription" class="btn-primary">
     <span>Je sécurise ma place maintenant</span>
@@ -1722,10 +878,10 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">
-        <span>Et si je ne peux pas assister au live ?</span>
+        <span></span>
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-a"><p>Le replay est inclus dans les formules Engagée et VIP et reste disponible pendant 30 jours après l'événement. Pour la formule Participante, la présence live est recommandée pour vivre les exercices en direct.</p></div>
+      <div class="faq-a"><p></p></div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">
@@ -1739,7 +895,7 @@
         <span>Quelle est la différence avec un atelier de développement personnel classique ?</span>
         <div class="faq-toggle">+</div>
       </div>
-      <div class="faq-a"><p>Deux différences majeures : d'abord, nous partons de la science (neurosciences, psychologie cognitive, neuroplasticité) — pas d'intuitions ou de témoignages. Ensuite, tout est contextualisé à la réalité des femmes en Afrique francophone. Pas un programme occidental traduit.</p></div>
+      <div class="faq-a"><p>Nous partons de la science (neurosciences, psychologie cognitive, neuroplasticité) — pas d'intuitions ou de témoignages. Tout est aussi contextualisé à la réalité des femmes en Afrique.</p></div>
     </div>
   </div>
 </section>
@@ -1749,7 +905,7 @@
   <div class="final-cta-inner">
     <div class="section-eyebrow" style="justify-content:center;"><span style="color:var(--gold);">Votre prochaine étape</span></div>
     <h2>Vous méritez un cerveau<br>qui travaille <em>pour</em> vous.</h2>
-    <p>90 minutes. Une méthode. Une transformation mesurable. C'est tout ce qu'il faut pour commencer.</p>
+    <p>120 minutes. Une VRAIE méthode. Une RÉELLE transformation mesurable. C'est tout ce qu'il faut pour commencer.</p>
     <a href="#inscription" class="btn-primary">
       <span>Je rejoins l'atelier — je choisis ma formule</span>
       <span class="arrow">→</span>
@@ -1759,7 +915,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="logo">Groupe Roch'R · Yacine Roch · Coach YasS</div>
+  <div class="logo">Groupe Roch'R · Coach YasS · Coach YasS</div>
   <div class="copy">© 2026 · Groupe Roch'R · Ouagadougou · London · Montréal</div>
 </footer>
 
