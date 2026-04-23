@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Au-Delà du Sourire — Webinaire | Coach YasS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF3E8;
+    --deep: #2A1F0A;
+    --gold: #C9A84C;
+    --gold-light: #E8D5A3;
+    --gold-pale: #FFF8EE;
+    --terracotta: #8B3A2A;
+    --sage: #6B7C65;
+    --blush: #D4956A;
+    --charcoal: #2A1F0A;
+    --mid: #8B6A3A;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--deep);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .italic { font-family: 'Playfair Display', serif; font-style: italic; }
+
+  /* ——— NAV ——— */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 48px;
+    background: rgba(250,246,239,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+  }
+  .nav-cta {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { color: var(--terracotta); border-color: var(--terracotta); }
+
+  /* ——— HERO ——— */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 64px 80px 80px;
+    position: relative;
+    z-index: 2;
+  }
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 32px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 40px; height: 1px;
+    background: var(--gold);
+  }
+  .hero-eyebrow span {
+    font-size: 0.7rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .hero-date-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-light);
+    padding: 8px 20px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--mid);
+  }
+  .hero-date-badge strong { color: var(--terracotta); font-weight: 500; }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 5vw, 5.2rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .hero h1 .accent { font-style: italic; color: var(--terracotta); }
+  .hero h1 .gold-text { color: var(--gold); }
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    font-style: italic;
+    color: var(--mid);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  .hero-divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    margin-bottom: 32px;
+  }
+  .hero-promise {
+    font-size: 0.88rem;
+    color: var(--mid);
+    max-width: 440px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .hero-promise strong { color: var(--charcoal); font-weight: 500; }
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 380px;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--deep);
+    color: var(--gold-light);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 36px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--terracotta);
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .btn-primary:hover::before { transform: translateX(0); }
+  .btn-primary span { position: relative; z-index: 1; }
+  .btn-primary .arrow { transition: transform 0.3s; position: relative; z-index: 1; }
+  .btn-primary:hover .arrow { transform: translateX(6px); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--charcoal);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 36px;
+    border: 1px solid var(--gold-light);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: var(--gold-pale);
+  }
+  .hero-trust {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.72rem;
+    color: var(--mid);
+    letter-spacing: 0.08em;
+  }
+  .trust-dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* Hero right */
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    background: var(--charcoal);
+  }
+  .hero-bg-pattern {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 70% at 60% 40%, rgba(201,168,76,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(139,58,42,0.2) 0%, transparent 50%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.06) 1px, transparent 1px),
+      linear-gradient(120deg, rgba(201,168,76,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.25);
+    animation: breathe 6s ease-in-out infinite;
+  }
+  .orb-1 { width: 320px; height: 320px; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .orb-2 { width: 480px; height: 480px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: 1s; }
+  .orb-3 { width: 640px; height: 640px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation-delay: 2s; }
+  @keyframes breathe {
+    0%, 100% { transform: translate(-50%,-50%) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50%,-50%) scale(1.04); opacity: 1; }
+  }
+  .hero-quote-card {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+  }
+  .hero-quote-card .big-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.35;
+    text-align: center;
+  }
+  .hero-quote-card .big-quote .hl { color: var(--gold); font-weight: 500; }
+  .hero-quote-card .quote-attr {
+    margin-top: 24px;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(201,168,76,0.7);
+  }
+  .hero-stat-strip {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  .hero-stat {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border-right: 1px solid rgba(201,168,76,0.1);
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--gold);
+    display: block;
+  }
+  .hero-stat .label {
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(250,246,239,0.5);
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* ——— SECTION BASE ——— */
+  section { position: relative; }
+  .section-eyebrow {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 20px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    display: block;
+    width: 30px; height: 1px;
+    background: var(--gold);
+  }
+  .section-eyebrow span {
+    font-size: 0.68rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  /* ——— PAIN SECTION ——— */
+  .pain-section {
+    padding: 120px 80px;
+    background: var(--charcoal);
+    color: var(--cream);
+  }
+  .pain-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .pain-header .section-eyebrow span { color: var(--gold); }
+  .pain-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+  .pain-header h2 em { font-style: italic; color: var(--gold-light); }
+  .pain-header p {
+    color: rgba(250,246,239,0.65);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 420px;
+  }
+  .pain-header .reveal {
+    margin-top: 32px;
+    padding: 24px 28px;
+    border-left: 2px solid var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+  .pain-header .reveal p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold-light);
+    max-width: none;
+  }
+  .pain-list { display: flex; flex-direction: column; gap: 4px; padding-top: 8px; }
+  .pain-item {
+    display: flex; align-items: flex-start; gap: 20px;
+    padding: 20px 24px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    cursor: default;
+    border-radius: 2px;
+  }
+  .pain-item:hover {
+    border-color: rgba(201,168,76,0.2);
+    background: rgba(201,168,76,0.04);
+  }
+  .pain-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+  .pain-text { font-size: 0.88rem; color: rgba(250,246,239,0.75); line-height: 1.6; }
+  .pain-text strong { color: var(--cream); font-weight: 500; display: block; margin-bottom: 4px; }
+
+  /* ——— SCIENCE SECTION ——— */
+  .science-section {
+    padding: 120px 80px;
+    background: var(--cream);
+  }
+  .science-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .science-inner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+  }
+  .science-inner h2 em { font-style: italic; color: var(--terracotta); }
+  .science-intro {
+    font-size: 1rem;
+    color: var(--mid);
+    max-width: 580px;
+    margin: 0 auto 64px;
+    line-height: 1.8;
+  }
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--gold-light);
+    border: 1px solid var(--gold-light);
+    margin-bottom: 64px;
+  }
+  .pillar {
+    background: var(--cream);
+    padding: 48px 36px;
+    text-align: left;
+    transition: background 0.3s;
+  }
+  .pillar:hover { background: var(--gold-pale); }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .pillar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .pillar p { font-size: 0.85rem; color: var(--mid); line-height: 1.75; }
+  .pillar .tag {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid var(--gold-light);
+    padding-bottom: 2px;
+  }
+
+  /* ——— WHAT YOU LEARN ——— */
+  .learn-section {
+    padding: 120px 80px;
+    background: var(--gold-pale);
+  }
+  .learn-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .learn-header { position: sticky; top: 120px; }
+  .learn-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+  }
+  .learn-header h2 em { font-style: italic; color: var(--terracotta); }
+  .learn-header p { font-size: 0.88rem; color: var(--mid); line-height: 1.8; }
+  .not-this {
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: white;
+    border-left: 3px solid var(--terracotta);
+  }
+  .not-this p {
+    font-size: 0.82rem;
+    color: var(--terracotta) !important;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .not-this .not-list {
+    margin-top: 12px;
+    font-size: 0.82rem;
+    color: var(--mid) !important;
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  .learn-items { display: flex; flex-direction: column; gap: 2px; }
+  .learn-item {
+    display: flex;
+    gap: 24px;
+    padding: 28px 32px;
+    background: white;
+    transition: all 0.3s;
+    align-items: flex-start;
+    border-left: 3px solid transparent;
+  }
+  .learn-item:hover {
+    border-left-color: var(--gold);
+    transform: translateX(4px);
+  }
+  .learn-marker {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .learn-text h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+  }
+  .learn-text p { font-size: 0.84rem; color: var(--mid); line-height: 1.75; }
+
+  /* ——— PRICING ——— */
+  .pricing-section {
+    padding: 120px 80px;
+    background: var(--charcoal);
+    color: var(--cream);
+  }
+  .pricing-inner { max-width: 1100px; margin: 0 auto; }
+  .pricing-header { text-align: center; margin-bottom: 64px; }
+  .pricing-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .pricing-header p {
+    color: rgba(250,246,239,0.55);
+    font-size: 0.9rem;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.15);
+  }
+  .pricing-card {
+    background: #352810;
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: background 0.3s;
+  }
+  .pricing-card:hover { background: #2A2110; }
+  .pricing-card.featured {
+    background: var(--deep);
+    border: 1px solid rgba(201,168,76,0.35);
+    transform: scaleY(1.02);
+    z-index: 1;
+  }
+  .pricing-card.featured::before {
+    content: 'LE PLUS POPULAIRE';
+    position: absolute;
+    top: -1px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--deep);
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    padding: 6px 20px;
+    font-weight: 500;
+  }
+  .card-tier {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+  .card-emoji { font-size: 1.4rem; margin-bottom: 20px; display: block; }
+  .card-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .price-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .price-currency {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: rgba(201,168,76,0.7);
+    text-transform: uppercase;
+  }
+  .card-desc {
+    font-size: 0.78rem;
+    color: rgba(250,246,239,0.45);
+    margin-bottom: 28px;
+    line-height: 1.6;
+    min-height: 48px;
+  }
+  .card-divider {
+    width: 40px; height: 1px;
+    background: rgba(201,168,76,0.25);
+    margin-bottom: 24px;
+  }
+  .card-features { list-style: none; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+  .card-features li {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 0.8rem;
+    color: rgba(250,246,239,0.7);
+    line-height: 1.5;
+  }
+  .card-features li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    margin-top: 2px;
+  }
+  .card-cta {
+    display: block;
+    margin-top: 32px;
+    text-align: center;
+    padding: 16px 24px;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 400;
+  }
+  .pricing-card:not(.featured) .card-cta {
+    border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold-light);
+  }
+  .pricing-card:not(.featured) .card-cta:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+  .featured .card-cta { background: var(--gold); color: var(--deep); }
+  .featured .card-cta:hover { background: var(--gold-light); }
+  .pricing-note {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.78rem;
+    color: rgba(250,246,239,0.4);
+    letter-spacing: 0.05em;
+  }
+  .pricing-note strong { color: rgba(250,246,239,0.65); }
+
+  /* ——— BIO ——— */
+  .bio-section {
+    padding: 120px 80px;
+    background: var(--cream);
+  }
+  .bio-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .bio-visual { position: relative; }
+  .bio-frame {
+    background: var(--charcoal);
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bio-frame-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 80% 80%, rgba(139,58,42,0.15) 0%, transparent 50%);
+  }
+  .bio-ornament {
+    position: absolute;
+    top: 32px; right: 32px;
+    width: 80px; height: 80px;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 50%;
+  }
+  .bio-frame-text { position: relative; z-index: 1; }
+  .bio-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--cream);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .bio-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+  }
+  .bio-corner {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 120px; height: 120px;
+    border: 1px solid var(--gold-light);
+    z-index: -1;
+  }
+  .bio-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+  }
+  .bio-content h2 em { font-style: italic; color: var(--terracotta); }
+  .bio-quote {
+    padding: 24px 28px;
+    border-left: 2px solid var(--gold);
+    background: var(--gold-pale);
+    margin-bottom: 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+  .bio-content p {
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  .credentials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .credential {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background: var(--gold-pale);
+    border: 1px solid var(--gold-light);
+    align-items: flex-start;
+  }
+  .cred-icon { font-size: 1.1rem; flex-shrink: 0; }
+  .credential p { font-size: 0.78rem; color: var(--mid); line-height: 1.5; margin: 0; }
+
+  /* ——— TESTIMONIALS ——— */
+  .testimonials-section {
+    padding: 120px 80px;
+    background: var(--gold-pale);
+  }
+  .testimonials-inner { max-width: 1200px; margin: 0 auto; }
+  .testimonials-header { text-align: center; margin-bottom: 64px; }
+  .testimonials-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    font-weight: 300;
+    color: var(--charcoal);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .testimonials-header h2 em { font-style: italic; color: var(--terracotta); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--gold-light);
+    border: 1px solid var(--gold-light);
+  }
+  .testi-card {
+    background: white;
+    padding: 40px 32px;
+    transition: background 0.3s;
+  }
+  .testi-card:hover { background: var(--cream); }
+  .testi-stars { margin-bottom: 20px; }
+  .star { color: var(--gold); font-size: 0.9rem; }
+  .testi-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .testi-author { display: flex; align-items: center; gap: 16px; }
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--charcoal);
+    color: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .testi-info { display: flex; flex-direction: column; }
+  .testi-info .name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--charcoal);
+  }
+  .testi-info .role {
+    font-size: 0.72rem;
+    color: var(--mid);
+    letter-spacing: 0.05em;
+  }
+
+  /* ——— URGENCY ——— */
+  .urgency-section {
+    padding: 120px 80px;
+    background: var(--terracotta);
+    color: var(--cream);
+    text-align: center;
+  }
+  .urgency-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--cream);
+  }
+  .urgency-section h2 em { font-style: italic; color: var(--gold-light); }
+  .urgency-section p {
+    font-size: 0.95rem;
+    color: rgba(250,243,232,0.75);
+    max-width: 480px;
+    margin: 0 auto 48px;
+    line-height: 1.8;
+  }
+  .urgency-section .btn-primary {
+    background: var(--cream);
+    color: var(--terracotta);
+    margin: 0 auto;
+    display: inline-flex;
+  }
+  .urgency-section .btn-primary::before { background: var(--charcoal); }
+  .urgency-section .btn-primary:hover span,
+  .urgency-section .btn-primary:hover .arrow { color: var(--cream); }
+  .urgency-meta {
+    margin-top: 24px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: rgba(250,243,232,0.5);
+    text-transform: uppercase;
+  }
+
+  /* ——— FAQ ——— */
+  .faq-section {
+    padding: 120px 80px;
+    background: var(--cream);
+  }
+  .faq-inner { max-width: 760px; margin: 0 auto; }
+  .faq-inner h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    color: var(--charcoal);
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--gold-light);
+    overflow: hidden;
+  }
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+    gap: 24px;
+    user-select: none;
+  }
+  .faq-q span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.4;
+  }
+  .faq-toggle {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--gold-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: all 0.3s;
+  }
+  .faq-item.open .faq-toggle {
+    background: var(--gold);
+    color: var(--deep);
+    border-color: var(--gold);
+    transform: rotate(45deg);
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .faq-item.open .faq-a { max-height: 300px; }
+  .faq-a p {
+    padding: 0 0 24px;
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.8;
+  }
+
+  /* ——— FINAL CTA ——— */
+  .final-cta {
+    padding: 120px 80px;
+    background: var(--charcoal);
+    text-align: center;
+  }
+  .final-cta-inner { max-width: 700px; margin: 0 auto; }
+  .final-cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .final-cta h2 em { font-style: italic; color: var(--gold); }
+  .final-cta p {
+    font-size: 0.92rem;
+    color: rgba(250,246,239,0.55);
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .final-cta .btn-primary { margin: 0 auto; display: inline-flex; }
+
+  /* ——— FOOTER ——— */
+  footer {
+    padding: 40px 80px;
+    background: var(--deep);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+  footer .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+  footer .copy {
+    font-size: 0.72rem;
+    color: rgba(250,246,239,0.3);
+    letter-spacing: 0.08em;
+  }
+
+  /* ——— COUNTDOWN ——— */
+  .countdown-strip {
+    background: var(--deep);
+    padding: 32px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .cd-block {
+    text-align: center;
+    padding: 0 32px;
+    border-right: 1px solid rgba(201,168,76,0.15);
+  }
+  .cd-block:last-child { border-right: none; }
+  .cd-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+  .cd-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(250,246,239,0.4);
+    display: block;
+    margin-top: 6px;
+  }
+
+  /* ——— RESPONSIVE ——— */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 100px 24px 60px; }
+    .hero-right { height: 300px; }
+    .pain-inner, .learn-inner, .bio-inner { grid-template-columns: 1fr; gap: 48px; }
+    .pillars, .pricing-cards, .testi-grid { grid-template-columns: 1fr; }
+    .pricing-card.featured { transform: none; }
+    .pain-section, .science-section, .learn-section, .pricing-section,
+    .bio-section, .testimonials-section, .urgency-section, .faq-section,
+    .final-cta { padding: 80px 24px; }
+    footer { flex-direction: column; gap: 16px; padding: 32px 24px; text-align: center; }
+    .countdown-strip { padding: 24px; gap: 0; }
+    .cd-block { padding: 0 16px; }
+    .credentials { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Coach YasS</div>
+  <a href="#inscription" class="nav-cta">Je m'inscris →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span>Webinaire · Neurosciences & Bien-être</span>
+    </div>
+    <div class="hero-date-badge">
+      <strong>30 Avril 2026</strong> · 15h00 GMT · En ligne via Zoom
+    </div>
+    <h1>
+      Au-Delà<br>
+      <span class="accent">du Sourire</span>
+    </h1>
+    <p class="hero-subtitle">
+      Reprogrammez votre cerveau. Récupérez votre énergie. Retrouvez vous-même.
+    </p>
+    <div class="hero-divider"></div>
+    <p class="hero-promise">
+      Un atelier de <strong>120 minutes</strong> basé sur les neurosciences pour les femmes africaines ambitieuses qui ont tout — sauf la paix intérieure.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#inscription" class="btn-primary">
+        <span>Je réserve ma place</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="#programme" class="btn-secondary">Voir le programme</a>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-dot"></span>
+      <span>Paiement sécurisé</span>
+      <span class="trust-dot"></span>
+      <span>Orange Money · Moov · Carte</span>
+      <span class="trust-dot"></span>
+      <span>Places limitées</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="hero-quote-card">
+      <div class="big-quote">
+        « Votre cerveau peut changer.<br>
+        La science dit <span class="hl">oui.</span><br>
+        Il est temps de le prouver. »
+      </div>
+      <div class="quote-attr">— Coach YasS</div>
+    </div>
+    <div class="hero-stat-strip">
+      <div class="hero-stat">
+        <span class="num">18+</span>
+        <span class="label">Années d'exp.</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">4</span>
+        <span class="label">Continents</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">100+</span>
+        <span class="label">Coachings</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown-strip">
+  <div class="cd-block">
+    <span class="cd-num" id="days">00</span>
+    <span class="cd-label">Jours</span>
+  </div>
+  <div class="cd-block">
+    <span class="cd-num" id="hours">00</span>
+    <span class="cd-label">Heures</span>
+  </div>
+  <div class="cd-block">
+    <span class="cd-num" id="mins">00</span>
+    <span class="cd-label">Minutes</span>
+  </div>
+  <div class="cd-block">
+    <span class="cd-num" id="secs">00</span>
+    <span class="cd-label">Secondes</span>
+  </div>
+</div>
+
+<!-- PAIN SECTION -->
+<section class="pain-section">
+  <div class="pain-inner">
+    <div class="pain-header">
+      <div class="section-eyebrow"><span>Vous reconnaissez-vous ?</span></div>
+      <h2>Vous souriez.<br>Mais <em>à l'intérieur</em>…</h2>
+      <p>Des millions de femmes africaines portent des charges invisibles tout en affichant une façade impeccable. Ce n'est pas un manque de volonté — c'est de la neurobiologie.</p>
+      <div class="reveal">
+        <p>« Ce que vous vivez a un nom scientifique. Et une solution concrète. »</p>
+      </div>
+    </div>
+    <div class="pain-list">
+      <div class="pain-item">
+        <div class="pain-icon">😔</div>
+        <div class="pain-text">
+          <strong>L'épuisement chronique</strong>
+          Vous vous réveillez fatiguée, même après une nuit complète. L'énergie ne revient plus comme avant.
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">🔄</div>
+        <div class="pain-text">
+          <strong>Le cycle sans fin</strong>
+          Travailler, gérer, performer, recommencer. Sans espace pour respirer, encore moins pour rêver.
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">🧠</div>
+        <div class="pain-text">
+          <strong>Le mental qui tourne</strong>
+          Ruminations, anxiété, doute de soi. Votre cerveau est en mode survie permanent.
+        </div>
+      </div>
+      <div class="pain-item">
+        <div class="pain-icon">🎭</div>
+        <div class="pain-text">
+          <strong>Le masque du succès</strong>
+          Tout le monde vous voit forte. Personne ne voit le prix que vous payez.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCIENCE SECTION -->
+<section class="science-section" id="programme">
+  <div class="science-inner">
+    <div class="section-eyebrow" style="justify-content:center;"><span>La méthode</span></div>
+    <h2>La science au service<br>de <em>votre transformation</em></h2>
+    <p class="science-intro">Pas de platitudes. Pas de "pense positif". Des outils validés par la recherche en neurosciences, adaptés à votre réalité africaine.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-num">01</span>
+        <h3>Comprendre votre cerveau</h3>
+        <p>Neuroplasticité, système nerveux autonome, réponse au stress. Vous apprendrez comment votre biologie conditionne vos émotions — et comment reprendre le contrôle.</p>
+        <span class="tag">Neurosciences</span>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">02</span>
+        <h3>Reprogrammer les schémas</h3>
+        <p>Identifier les croyances limitantes héritées, comprendre l'impact du contexte culturel africain sur le psychisme féminin, et commencer à réécrire votre script intérieur.</p>
+        <span class="tag">Psychologie cognitive</span>
+      </div>
+      <div class="pillar">
+        <span class="pillar-num">03</span>
+        <h3>Ancrer le changement</h3>
+        <p>Des pratiques de 2 à 5 minutes, réalistes pour une femme active. Techniques de régulation du système nerveux, routines de résilience, outils de mesure du progrès.</p>
+        <span class="tag">Application concrète</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU LEARN -->
+<section class="learn-section">
+  <div class="learn-inner">
+    <div class="learn-header">
+      <div class="section-eyebrow"><span>Au programme</span></div>
+      <h2>Ce que vous<br><em>repartirez</em><br>avec vous</h2>
+      <p>Chaque module est conçu pour être immédiatement applicable, même avec un agenda chargé.</p>
+      <div class="not-this">
+        <p>Ce n'est PAS</p>
+        <p class="not-list">— Un webinaire de motivation vide<br>— Des conseils copiés de l'Occident<br>— Des promesses sans fondement scientifique</p>
+      </div>
+    </div>
+    <div class="learn-items">
+      <div class="learn-item">
+        <div class="learn-marker">1</div>
+        <div class="learn-text">
+          <h4>La cartographie de votre état nerveux</h4>
+          <p>Identifier où vous en êtes réellement sur l'échelle stress-repos, et comprendre pourquoi vous vous sentez comme vous vous sentez.</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-marker">2</div>
+        <div class="learn-text">
+          <h4>La technique des 2 minutes</h4>
+          <p>Une pratique neurologique simple que vous pouvez faire avant une réunion, entre deux rendez-vous, ou au réveil. Résultats mesurables en 3 semaines.</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-marker">3</div>
+        <div class="learn-text">
+          <h4>Décoder vos patterns émotionnels</h4>
+          <p>Comprendre l'origine de vos réactions automatiques et apprendre à les interrompre avant qu'elles ne vous contrôlent.</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-marker">4</div>
+        <div class="learn-text">
+          <h4>La boîte à outils de la résilience africaine</h4>
+          <p>Des ressources ancrées dans notre réalité culturelle — pas des traductions mal adaptées d'approches occidentales.</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-marker">5</div>
+        <div class="learn-text">
+          <h4>Votre plan d'action personnalisé</h4>
+          <p>Repartez avec un document concret : vos 3 pratiques prioritaires, vos indicateurs de progrès, et votre engagement envers vous-même.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="inscription">
+  <div class="pricing-inner">
+    <div class="pricing-header">
+      <div class="section-eyebrow" style="justify-content:center;"><span style="color:var(--gold);">Choisissez votre formule</span></div>
+      <h2>Investissez en vous</h2>
+      <p>Trois niveaux d'accès pour s'adapter à votre situation. Toutes les formules incluent l'atelier en direct.</p>
+    </div>
+    <div class="pricing-cards">
+      <div class="pricing-card">
+        <div class="card-tier">Accès Essentiel</div>
+        <div class="card-name">Éveil</div>
+        <span class="card-emoji">🌱</span>
+        <div class="card-price">
+          <span class="price-num">15 000</span>
+          <span class="price-currency">FCFA</span>
+        </div>
+        <div class="card-desc">Pour découvrir et commencer votre transformation.</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li>Accès live à l'atelier (120 min)</li>
+          <li>Replay disponible 48h</li>
+          <li>Guide de référence PDF</li>
+        </ul>
+        <a href="#" class="card-cta">Je choisis Éveil</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="card-tier">Accès Complet</div>
+        <div class="card-name">Transformation</div>
+        <span class="card-emoji">🔥</span>
+        <div class="card-price">
+          <span class="price-num">35 000</span>
+          <span class="price-currency">FCFA</span>
+        </div>
+        <div class="card-desc">L'expérience complète pour une transformation durable.</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li>Accès live à l'atelier (120 min)</li>
+          <li>Replay illimité pendant 30 jours</li>
+          <li>Kit complet d'outils pratiques</li>
+          <li>Session Q&A exclusive post-atelier</li>
+          <li>Accès communauté privée (30 jours)</li>
+        </ul>
+        <a href="#" class="card-cta">Je choisis Transformation</a>
+      </div>
+      <div class="pricing-card">
+        <div class="card-tier">VIP</div>
+        <div class="card-name">Immersion</div>
+        <span class="card-emoji">👑</span>
+        <div class="card-price">
+          <span class="price-num">75 000</span>
+          <span class="price-currency">FCFA</span>
+        </div>
+        <div class="card-desc">Pour celles qui veulent aller plus loin avec un accompagnement personnalisé.</div>
+        <div class="card-divider"></div>
+        <ul class="card-features">
+          <li>Tout ce qui est dans Transformation</li>
+          <li>1 session individuelle avec Coach YasS (45 min)</li>
+          <li>Bilan psychométrique personnalisé</li>
+          <li>Plan d'action sur 90 jours</li>
+          <li>Accès communauté VIP (3 mois)</li>
+        </ul>
+        <a href="#" class="card-cta">Je choisis Immersion</a>
+      </div>
+    </div>
+    <p class="pricing-note">
+      <strong>Diaspora :</strong> Tarif en euros disponible sur demande ·
+      <strong>Paiement :</strong> Orange Money · Moov Money · Carte bancaire (Visa/Mastercard)
+    </p>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-section">
+  <div class="bio-inner">
+    <div class="bio-visual">
+      <div class="bio-frame">
+        <div class="bio-frame-bg"></div>
+        <div class="bio-ornament"></div>
+        <div class="bio-frame-text">
+          <span class="bio-name">Coach YasS</span>
+          <span class="bio-title">Fondatrice · Groupe Roch'R</span>
+        </div>
+      </div>
+      <div class="bio-corner"></div>
+    </div>
+    <div class="bio-content">
+      <div class="section-eyebrow"><span>Votre animatrice</span></div>
+      <h2>Une voix africaine.<br>Une <em>expertise</em> mondiale.</h2>
+      <div class="bio-quote">
+        « J'ai vécu le burnout. J'ai connu la dépression. J'ai transformé mon cerveau. Maintenant, j'enseigne comment — avec de la science, pas des slogans. »
+      </div>
+      <p>Coach YasS est Fondatrice et Gérante du Groupe Roch'R, cabinet panafricain de conseil, formation et coaching basé à Ouagadougou, avec une présence à Londres et Montréal.</p>
+      <p>Après près d'une décennie comme conseillère en diplomatie économique pour les gouvernements britannique et gallois au Canada, elle a fait le choix délibéré de rentrer contribuer au développement africain.</p>
+      <div class="credentials">
+        <div class="credential">
+          <span class="cred-icon">🎓</span>
+          <p>MBA en International Business — Canada</p>
+        </div>
+        <div class="credential">
+          <span class="cred-icon">🌍</span>
+          <p>+18 ans d'expérience internationale — Afrique, Amériques, Europe</p>
+        </div>
+        <div class="credential">
+          <span class="cred-icon">🏛️</span>
+          <p>Ancienne Conseillère, Gouvernements UK & Pays de Galles</p>
+        </div>
+        <div class="credential">
+          <span class="cred-icon">🧠</span>
+          <p>Certifiée Spécialiste — Psychométrie (personnalité, compétences, leadership)</p>
+        </div>
+        <div class="credential">
+          <span class="cred-icon">🏢</span>
+          <p>Clients : Banques, Telecom, Ministères BF & Togo, Universités</p>
+        </div>
+        <div class="credential">
+          <span class="cred-icon">👥</span>
+          <p>Centaines de coachings — ministres, PDG, dirigeantes toutes industries</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="testimonials-inner">
+    <div class="testimonials-header">
+      <div class="section-eyebrow" style="justify-content:center;"><span>Ce qu'elles disent</span></div>
+      <h2>Des femmes qui ont osé<br><em>investir en elles.</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testi-text">« Je pensais que c'était ma personnalité d'être anxieuse. Yacine m'a montré que c'était mon système nerveux. En 3 semaines, ma vie au réveil a changé. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div class="testi-info">
+            <span class="name">Aminata K.</span>
+            <span class="role">Directrice RH · Ouagadougou</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testi-text">« Jamais vu une formation aussi bien conçue pour nous, les femmes africaines. Pas de copier-coller occidental. Une approche qui respecte notre réalité. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">F</div>
+          <div class="testi-info">
+            <span class="name">Fatoumata D.</span>
+            <span class="role">Entrepreneuse · Abidjan</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testi-text">« Ce que j'ai appris en 120 minutes avec Yacine, j'aurais dû l'apprendre à 20 ans. La technique des 2 minutes — je l'utilise chaque matin avant mes réunions. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div class="testi-info">
+            <span class="name">Marie-Claire O.</span>
+            <span class="role">Cadre bancaire · Lomé</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- URGENCY -->
+<section class="urgency-section">
+  <h2>Les places se<br>ferment le<br><em>30 avril 2026.</em></h2>
+  <p>Cet atelier est conçu pour une expérience intime et de qualité. Le nombre de participantes est volontairement limité pour garantir la profondeur des échanges.</p>
+  <a href="#inscription" class="btn-primary">
+    <span>Je sécurise ma place maintenant</span>
+    <span class="arrow">→</span>
+  </a>
+  <p class="urgency-meta">Paiement sécurisé · Orange Money · Moov Money · Carte bancaire</p>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <h2>Questions fréquentes</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>J'habite en dehors du Burkina Faso — puis-je participer ?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><p>Absolument. L'atelier est 100% en ligne via Zoom et accessible depuis n'importe quel pays. Pour la diaspora (France, Canada, Belgique, Guinée…), un tarif en euros est disponible sur simple demande. Contactez-nous pour les détails.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Comment je règle mon inscription ?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><p>Nous acceptons Orange Money, Moov Money, et les cartes bancaires (Visa/Mastercard via UBA, Ecobank, etc.). Après votre paiement, vous recevez un lien de confirmation et le lien Zoom dans les 24 heures.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Y a-t-il un replay si je ne peux pas assister en direct ?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><p>Oui. Les formules Transformation et Immersion incluent l'accès au replay. La formule Éveil donne accès au replay pendant 48h uniquement.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>J'ai une vie très chargée — est-ce que je peux vraiment appliquer ce que j'apprends ?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><p>C'est précisément pour vous que cet atelier a été conçu. La technique principale demande 2 minutes par jour. Toutes les pratiques sont pensées pour les femmes africaines actives — mères, entrepreneuses, cadres — qui n'ont pas de temps à perdre.</p></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <span>Quelle est la différence avec un atelier de développement personnel classique ?</span>
+        <div class="faq-toggle">+</div>
+      </div>
+      <div class="faq-a"><p>Nous partons de la science (neurosciences, psychologie cognitive, neuroplasticité) — pas d'intuitions ou de témoignages. Tout est aussi contextualisé à la réalité des femmes en Afrique.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="section-eyebrow" style="justify-content:center;"><span style="color:var(--gold);">Votre prochaine étape</span></div>
+    <h2>Vous méritez un cerveau<br>qui travaille <em>pour</em> vous.</h2>
+    <p>120 minutes. Une vraie méthode. Une transformation mesurable. C'est tout ce qu'il faut pour commencer.</p>
+    <a href="#inscription" class="btn-primary">
+      <span>Je rejoins l'atelier — je choisis ma formule</span>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Groupe Roch'R · Coach YasS</div>
+  <div class="copy">© 2026 · Groupe Roch'R · Ouagadougou · London · Montréal</div>
+</footer>
+
+<script>
+// FIX: Countdown mis à jour vers le 30 avril 2026
+function updateCountdown() {
+  const target = new Date('2026-04-30T15:00:00Z');
+  const now = new Date();
+  const diff = target - now;
+
+  if (diff <= 0) {
+    ['days','hours','mins','secs'].forEach(id => {
+      document.getElementById(id).textContent = '00';
+    });
+    return;
+  }
+
+  const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById('days').textContent  = String(days).padStart(2,'0');
+  document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('mins').textContent  = String(mins).padStart(2,'0');
+  document.getElementById('secs').textContent  = String(secs).padStart(2,'0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// FAQ toggle
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.pillar, .pain-item, .learn-item, .pricing-card, .testi-card, .credential').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
